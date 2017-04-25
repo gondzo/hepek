@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="ba.ima.hepek"
-    android:versionCode="2"
+    android:versionCode="8"
     android:versionName="1.0" >
 
     <!-- Supporting 2.2.x and above -->
@@ -15,11 +15,13 @@
     <!-- INTERNET access for sockets (Might communicate remotely) -->
     <uses-permission android:name="android.permission.INTERNET" />
     
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    
     <!-- BLUETOOTH access to connect to paired devices -->
-    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <!-- <uses-permission android:name="android.permission.BLUETOOTH" />  -->
     
     <!-- BLUETOOTH_ADMIN access to allow discovery and pairing -->
-    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />     
+    <!-- <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />  -->     
        
      <permission android:name="android.permission.FLASHLIGHT"
              android:permissionGroup="android.permission-group.HARDWARE_CONTROLS"
@@ -32,11 +34,12 @@
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
     
     <!-- READ_CONTACTS access to be able to sync other contacts who use Hepek -->
-    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <!-- <uses-permission android:name="android.permission.READ_CONTACTS" />  -->
     
     <!-- READ_PROFILE access to get some more info about user -->
-    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <!-- <uses-permission android:name="android.permission.READ_PROFILE" />  -->
     
+    <!-- CAMERA ACCESS for FLASHLIGHT (and maybe photo taking in future) -->
     <uses-permission android:name="android.permission.CAMERA" />
               
    	 
@@ -59,12 +62,14 @@
             android:label="@string/app_name" 
             android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
             android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
+        <activity
+            android:name="ba.ima.hepek.ShareHepekActivity"
+            android:label="@string/share_activity_name"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
+            android:screenOrientation="portrait">
+            
+            </activity>
         
     </application>
 
