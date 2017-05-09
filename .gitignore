@@ -19,3 +19,6 @@ local.properties
 .classpath
 .project
 .settings
+/build
+/app/build
+/app/app-release.apk
