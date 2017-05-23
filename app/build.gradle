@@ -4,10 +4,21 @@ android {
     compileSdkVersion 17
     buildToolsVersion "25.0.2"
 
+    def username = System.getenv("MQTT_USERNAME")
+    def password = System.getenv("MQTT_PASSWORD")
+    if (username == null) {
+        username="test"
+    }
+    if (password == null) {
+        password="test"
+    }
+
     defaultConfig {
         applicationId "ba.ima.hepek"
-        minSdkVersion 8
+        minSdkVersion 14
         targetSdkVersion 16
+        buildConfigField "String", "mqttUsername", "\""+username+"\""
+        buildConfigField "String", "mqttPassword", "\""+password+"\""
     }
 
     buildTypes {
@@ -23,4 +34,6 @@ dependencies {
     compile 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.1.0'
     compile 'org.eclipse.paho:org.eclipse.paho.android.service:1.1.1'
     compile files('libs/libGoogleAnalyticsV2.jar')
+    compile 'com.google.android.gms:play-services-location:10.2.6'
+    compile 'com.google.code.gson:gson:2.7'
 }

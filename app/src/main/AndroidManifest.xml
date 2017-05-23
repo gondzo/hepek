@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="ba.ima.hepek"
-    android:versionCode="8"
+    android:versionCode="14"
     android:versionName="1.0" >
 
     <!-- Supporting 2.2.x and above -->
     <!-- Targeting for 4.1.x -->
     <uses-sdk
-        android:minSdkVersion="8"
+        android:minSdkVersion="14"
         android:targetSdkVersion="16" />
 
     <!-- Permissions -->
@@ -16,40 +16,27 @@
     <uses-permission android:name="android.permission.INTERNET" />
     
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    
-    <!-- BLUETOOTH access to connect to paired devices -->
-    <!-- <uses-permission android:name="android.permission.BLUETOOTH" />  -->
-    
-    <!-- BLUETOOTH_ADMIN access to allow discovery and pairing -->
-    <!-- <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />  -->     
-       
-     <permission android:name="android.permission.FLASHLIGHT"
-             android:permissionGroup="android.permission-group.HARDWARE_CONTROLS"
-             android:protectionLevel="normal" />
-    
-    <!-- VIBRATE access for some fancy effects -->
-    <uses-permission android:name="android.permission.VIBRATE" />
-    
-    <!-- MODIFY_AUDIO_SETTINGS access for some fancy effects -->
-    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
-    
-    <!-- READ_CONTACTS access to be able to sync other contacts who use Hepek -->
-    <!-- <uses-permission android:name="android.permission.READ_CONTACTS" />  -->
-    
-    <!-- READ_PROFILE access to get some more info about user -->
-    <!-- <uses-permission android:name="android.permission.READ_PROFILE" />  -->
-    
-    <!-- CAMERA ACCESS for FLASHLIGHT (and maybe photo taking in future) -->
-    <uses-permission android:name="android.permission.CAMERA" />
+
 
     <!-- Permissions the Application Requires -->
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
-    <!--<uses-permission android:name="android.permission.READ_PHONE_STATE" />-->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- CAMERA ACCESS for FLASHLIGHT (and maybe photo taking in future) -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <!-- VIBRATE access for some fancy effects -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <permission android:name="android.permission.FLASHLIGHT"
+        android:permissionGroup="android.permission-group.HARDWARE_CONTROLS"
+        android:protectionLevel="normal" />
+
+    <!-- MODIFY_AUDIO_SETTINGS access for some fancy effects -->
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+
               
    	 
     
