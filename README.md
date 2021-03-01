@@ -3,3 +3,6 @@ define MQTT_USERNAME and MQTT_PASSWORD environment variables prior to building t
 
 test
 test2
+
+fds
+afds
